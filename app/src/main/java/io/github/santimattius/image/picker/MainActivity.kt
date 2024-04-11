@@ -62,7 +62,7 @@ fun ImagePickerScreen(
         mutableStateOf<List<Uri?>>(emptyList())
     }
     val imageLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.PickMultipleVisualMedia(maxItems = 2)
+        contract = ActivityResultContracts.PickMultipleVisualMedia(maxItems = 5)
     ) { uris ->
         selectedImages = uris
     }
@@ -158,7 +158,7 @@ private fun GalleryView(
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun GreetingPreview() {
+fun ImagePickerPreview() {
     ImagePickerExampleTheme {
         ImagePickerScreen("Android")
     }
